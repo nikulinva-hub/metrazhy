@@ -1,0 +1,587 @@
+/* Основные стили страницы */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fff;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Шапка */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    height: 50px; /* Примерное значение, можно настроить под размер вашего логотипа */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.cta-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Уменьшение отступа между пунктами меню */
+    }
+
+    .cta-button {
+        margin-top: 10px; /* Добавление отступа сверху для кнопки на мобильных устройствах */
+    }
+}
+
+
+.cta-button:hover {
+    background-color: #dd0000;
+}
+
+/* Главный баннер */
+.hero-section {
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    padding: 250px 0px;
+    color: #fff;
+}
+
+.hero-section h1 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 32pt;
+}
+
+.hero-section p {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 20pt;
+}
+
+.parallax-content {
+    background-color: rgba(0, 0, 0, 0.3); /* Полупрозрачный цвет поверх фоновой картинки */
+    color: white;
+    padding: 50px 0px 100px 0px;
+    text-align: center;
+}
+
+.button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* О продукте, Преимущества */
+section {
+    padding: 50px 20px;
+}
+
+.about-section {
+    background-color: #f8f9fa;
+    padding: 50px 50px;
+    font-family: Arial, sans-serif;
+}
+
+.about-section h2 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+.about-section p {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.about-features {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.feature {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.feature h3 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .about-features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 80%;
+    }
+}
+
+/* Отзывы */
+#testimonials {
+    background-color: #f9f9f9;
+    padding: 50px 50px;
+}
+/* Стили для отзывов */
+/* Стили для секции отзывов */
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Это обеспечивает равномерное распределение отступов между элементами */
+}
+
+.testimonial {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px; /* Добавляем нижний отступ для отделения отзывов друг от друга */
+    margin-right: 20px; 
+    margin-left: 20px; 
+    width: calc(40% - 20px); /* Расчет ширины для 3 элементов в строке с учетом отступов */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .testimonial {
+        width: calc(50% - 20px); /* На устройствах средней ширины отзывы будут располагаться по 2 в строке */
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial {
+        width: 100%; /* На устройствах с маленькими экранами каждый отзыв будет занимать всю ширину строки */
+    }
+}
+
+
+.testimonial img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.testimonial h4 {
+    margin-top: 15px;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .testimonial {
+        width: calc(50% - 30px); /* Адаптируем под меньшие экраны */
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial {
+        width: 100%; /* Для очень маленьких экранов отображаем в один столбец */
+    }
+}
+
+
+/* FAQ */
+#faq {
+    background-color: #f1f1f1;
+    padding:50px 50px;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.imessage-faq {
+    background-color: #f0f0f5;
+    padding: 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.imessage-header {
+    background-color: #e5e5ea;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+}
+
+.dialogue {
+    padding: 20px;
+}
+
+.message {
+    max-width: 70%;
+    margin-bottom: 10px;
+    padding: 10px;
+    position: relative;
+    border-radius: 18px;
+    font-size: 16px;
+}
+
+.question {
+    background-color: #007aff;
+    color: white;
+    margin-left: auto;
+    text-align: left;
+}
+
+.answer {
+    background-color: #e5e5ea;
+    text-align: left;
+}
+
+.imessage-input {
+    display: flex;
+    margin-top: 20px;
+}
+
+.imessage-input input {
+    flex-grow: 1;
+    border: none;
+    padding: 10px;
+    border-radius: 18px 0 0 18px;
+    margin-right: -1px; /* Скрываем границу между кнопкой и инпутом */
+}
+
+.imessage-input button {
+    background-color: #007aff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 18px 18px 0;
+    cursor: pointer;
+}
+
+.imessage-input input:focus, .imessage-input button:focus {
+    outline: none;
+}
+
+/* Адаптация под мобильные устройства */
+@media (max-width: 768px) {
+    .message {
+        max-width: 90%;
+    }
+}
+
+
+/* Форма обратной связи */
+#contact {
+    padding:50px 50px
+}
+
+#contact form {
+    margin-top: 20px;
+}
+
+.contact-section {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+    font-family: Arial, sans-serif;
+}
+
+.contact-section h2 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 40px;
+}
+
+.contact-info, .contact-form {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.contact-info div, .contact-form form {
+    flex-basis: 45%;
+}
+
+.address, .phone-email, .contact-form h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.contact-info p, .contact-form form input, .contact-form form textarea {
+    margin-bottom: 15px;
+}
+
+.contact-info p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-form form input, .contact-form form textarea, .contact-form form button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form form button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .contact-info, .contact-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info div, .contact-form form {
+        flex-basis: auto;
+        width: 80%;
+    }
+}
+
+
+/* Подвал */
+footer {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Медиа-запросы для адаптивного дизайна */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Стиль модального окна */
+.modal {
+    display: none; /* Скрыть модальное окно по умолчанию */
+    position: fixed;
+    z-index: 1000; /* Положение над другими элементами */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Включить прокрутку, если необходимо */
+    background-color: rgba(0,0,0,0.4); /* Цвет фона с прозрачностью */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto; /* 10% от верха и центрировано */
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%; /* Ширина */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5ea;
+}
+
+.modal-header h2 {
+    color: #000;
+    font-size: 24px;
+}
+
+.close {
+    color: #ccc;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Стили формы внутри модального окна */
+.modal-body {
+    padding-top: 20px;
+}
+
+.modal-body form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-body label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.modal-body input[type=email], .modal-body textarea {
+    font-size: 14px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.modal-body input[type=submit] {
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+    background-color: #007aff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-body input[type=submit]:hover {
+    background-color: #005ecb;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 80%; /* Адаптация ширины для мобильных устройств */
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        margin: 20% auto; /* Увеличенный отступ сверху для мобильных устройств */
+        width: 90%; /* Ширина для очень маленьких экранов */
+    }
+}
+
+.benefits-section {
+    background-color: #fff;
+    padding: 50px 0;
+    font-family: Arial, sans-serif;
+}
+
+.benefits-section h2 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 40px;
+}
+
+.benefit-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.benefit-item {
+    background-color: #f8f9fa;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: calc(50% - 20px);
+    transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+.benefit-item h3 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.benefit-item p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .benefit-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .benefit-item {
+        width: 80%;
+    }
+}
